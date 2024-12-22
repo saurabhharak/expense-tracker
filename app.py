@@ -32,13 +32,15 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# ----------------------------------------
-# 2. LOAD CONFIG
-# ----------------------------------------
-with open("secrets.toml", "r") as f:
-    config = toml.load(f)
+# # ----------------------------------------
+# # 2. LOAD CONFIG
+# # ----------------------------------------
+# with open("secrets.toml", "r") as f:
+#     config = toml.load(f)
 
-DATABASE_URL = config["database"]["url"]
+# DATABASE_URL = config["database"]["url"]
+
+DATABASE_URL = st.secrets.database.url
 
 # ----------------------------------------
 # 3. DATABASE CONNECTION
