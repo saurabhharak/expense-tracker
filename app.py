@@ -35,7 +35,7 @@ st.markdown(
 # ----------------------------------------
 # 2. LOAD CONFIG
 # ----------------------------------------
-with open("config.toml", "r") as f:
+with open("secrets.toml", "r") as f:
     config = toml.load(f)
 
 DATABASE_URL = config["database"]["url"]
